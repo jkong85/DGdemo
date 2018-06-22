@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/services/base/base.iml" filepath="$PROJECT_DIR$/services/base/base.iml" />
       <module fileurl="file://$PROJECT_DIR$/dg.iml" filepath="$PROJECT_DIR$/dg.iml" />
       <module fileurl="file://$PROJECT_DIR$/services/httpserver/dg-services-httpserver.iml" filepath="$PROJECT_DIR$/services/httpserver/dg-services-httpserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/services/engining/engining.iml" filepath="$PROJECT_DIR$/services/engining/engining.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services/helloworld/helloworld.iml" filepath="$PROJECT_DIR$/services/helloworld/helloworld.iml" />
       <module fileurl="file://$PROJECT_DIR$/services/http-server/httpserver.iml" filepath="$PROJECT_DIR$/services/http-server/httpserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/services/services.iml" filepath="$PROJECT_DIR$/services/services.iml" />
       <module fileurl="file://$PROJECT_DIR$/services/speed/speed.iml" filepath="$PROJECT_DIR$/services/speed/speed.iml" />
