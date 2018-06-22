@@ -70,6 +70,29 @@
     <build>
         <plugins>
             <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <!-- here the phase you need -->
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/target</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/non-packaged-resources</directory>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <executions>
@@ -205,8 +228,9 @@
                                 </assembly>
                                 <runCmds>
                                     <!-- <runCmd>ln -s /opt/dg/${project.build.finalName}-allinone.jar /opt/dg/starter.jar</runCmd> -->
-                                    <!--<runCmd>ln -s /opt/dg/app-server-1.0-jar-with-dependencies.jar /opt/dg/starter.jar</runCmd>-->
                                     <runCmd>ln -s /opt/dg/dg-services-httpserver-1.0-SNAPSHOT-allinone.jar /opt/dg/starter.jar</runCmd>
+                                    <runCmd>chmod u+x start.sh</runCmd>
+                                    <runCmd>./start.sh</runCmd>
                                 </runCmds>
                             </build>
                         </image>

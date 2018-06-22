@@ -17,6 +17,7 @@
             <outputDirectory>/opt/dg</outputDirectory>
             <includes>
                 <include>*-allinone.jar</include>
+                <include>start.sh</include>
             </includes>
             <fileMode>0644</fileMode>
             <directoryMode>0755</directoryMode>

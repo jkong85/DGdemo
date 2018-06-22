@@ -14,6 +14,7 @@ import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 import com.typesafe.config.ConfigFactory;
 
+import java.io.*;
 import java.util.concurrent.CompletionStage;
 
 /**
@@ -33,12 +34,8 @@ public class HTTPServer extends AllDirectives {
         //#server-bootstrapping
         // boot up server using the route as defined below
         ActorSystem system = ActorSystem.create("helloAkkaHttpServer", ConfigFactory.load());
-        String hostIPAddress;
-        if(args == null){
-            hostIPAddress = "localhost";
-        }else{
-            hostIPAddress = args[0];
-        }
+
+
         //hostIPAddress = "172.20.8.10";
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
@@ -50,7 +47,7 @@ public class HTTPServer extends AllDirectives {
         //In order to access all directives we need an instance where the routes are define.
         HTTPServer app = new HTTPServer(system, userRegistryActor);
 
-
+        String hostIPAddress = app.getHostIPaddress("/opt/dg/ipaddress");
 
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = app.createRoute().flow(system, materializer);
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(routeFlow,
@@ -74,6 +71,33 @@ public class HTTPServer extends AllDirectives {
     protected Route createRoute() {
         return userRoutes.routes();
     }
+
+    private String getHostIPaddress(String file){
+        String line;
+        try {
+            // FileReader reads text files in the default encoding.
+            FileReader fileReader = new FileReader(file);
+
+            // Always wrap FileReader in BufferedReader.
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            System.out.println("step 1");
+
+            while((line = bufferedReader.readLine()) != null) {
+                System.out.println(line);
+                return line;
+            }
+            // Always close files.
+            bufferedReader.close();
+        } catch(FileNotFoundException ex) {
+            System.out.println( "Unable to open file '" + file+ "'");
+            return "127.0.0.1";
+        } catch(IOException ex) {
+            System.out.println( "Error reading file '" + file+ "'");
+            return "127.0.0.1";
+        }
+        return "127.0.0.1";
+    }
+
 
 }
 //#main-class
