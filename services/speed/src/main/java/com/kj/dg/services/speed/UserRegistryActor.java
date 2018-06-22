@@ -1,4 +1,4 @@
-package com.kj.dg.services.httpserver;
+package com.kj.dg.services.speed;
 
 import akka.actor.AbstractActor;
 import akka.actor.Props;
@@ -11,8 +11,6 @@ import java.util.List;
 /**
  * Created by jkong on 6/21/18.
  */
-
-import java.util.*;
 
 public class UserRegistryActor extends AbstractActor {
 
@@ -79,7 +77,7 @@ public class UserRegistryActor extends AbstractActor {
                 .match(UserRegistryMessages.CreateUser.class, createUser -> {
                     users.add(0, createUser.getUser());
                     getSender().tell(new UserRegistryMessages.ActionPerformed(
-                            String.format("User %s created.", createUser.getUser().getName())),getSelf());
+                            String.format("Speed %s uploaded!", createUser.getUser().getName())),getSelf());
                 })
                 .match(UserRegistryMessages.GetUser.class, getUser -> {
                     getSender().tell(users.stream()
