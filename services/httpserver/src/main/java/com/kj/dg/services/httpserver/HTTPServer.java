@@ -39,6 +39,7 @@ public class HTTPServer extends AllDirectives {
         }else{
             hostIPAddress = args[0];
         }
+        //hostIPAddress = "172.20.8.10";
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         //#server-bootstrapping
@@ -56,7 +57,7 @@ public class HTTPServer extends AllDirectives {
                 ConnectHttp.toHost(hostIPAddress, 8080), materializer);
                 //ConnectHttp.toHost("localhost", 8080), materializer);
 
-        System.out.println("Server online at http://localhost:8080/\nPress RETURN to stop...");
+        System.out.println("Server online at http://" + hostIPAddress + ":8080/\nPress RETURN to stop...");
         System.in.read(); // let it run until user presses return
 
         binding
