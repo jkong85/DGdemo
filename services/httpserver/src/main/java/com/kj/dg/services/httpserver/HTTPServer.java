@@ -35,8 +35,6 @@ public class HTTPServer extends AllDirectives {
         // boot up server using the route as defined below
         ActorSystem system = ActorSystem.create("helloAkkaHttpServer", ConfigFactory.load());
 
-
-        //hostIPAddress = "172.20.8.10";
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         //#server-bootstrapping
@@ -52,7 +50,6 @@ public class HTTPServer extends AllDirectives {
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = app.createRoute().flow(system, materializer);
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(routeFlow,
                 ConnectHttp.toHost(hostIPAddress, 8080), materializer);
-                //ConnectHttp.toHost("localhost", 8080), materializer);
 
         System.out.println("Server online at http://" + hostIPAddress + ":8080/\nPress RETURN to stop...");
         System.in.read(); // let it run until user presses return
