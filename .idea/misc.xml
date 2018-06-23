@@ -7,12 +7,13 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/services/engining/pom.xml" />
         <option value="$PROJECT_DIR$/services/speed/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/services/helloworld/pom.xml" />
+        <option value="$PROJECT_DIR$/services/k8sclient/pom.xml" />
         <option value="$PROJECT_DIR$/services/pom.xml" />
       </set>
     </option>

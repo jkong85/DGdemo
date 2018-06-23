@@ -12,12 +12,10 @@
     <artifactId>dg-services</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>engining</module>
         <module>speed</module>
         <module>httpserver</module>
         <module>base</module>
-        <module>helloworld</module>
+        <module>k8scontroller</module>
     </modules>
-
 
 </project>

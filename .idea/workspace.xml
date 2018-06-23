@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c01e5dbb-a47a-422a-9437-557738e94bc1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/services/httpserver/pom.xml.bak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/services/speed/pom.xml.bak" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/k8scontroller/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/k8scontroller/src/main/java/K8scontrollerMain.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/services/engining/engining.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/services/engining/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/services/helloworld/pom.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/services/helloworld/helloworld.iml" afterPath="$PROJECT_DIR$/services/k8scontroller/dg-services-k8scontroller.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/httpserver/run.sh" afterPath="$PROJECT_DIR$/services/httpserver/run.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/speed/pom.xml" afterPath="$PROJECT_DIR$/services/speed/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/speed/run.sh" afterPath="$PROJECT_DIR$/services/speed/run.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/SpeedMain.java" afterPath="$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/SpeedMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/speed/src/non-packaged-resources/start.sh" afterPath="$PROJECT_DIR$/services/speed/src/non-packaged-resources/start.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dg.iml" afterPath="$PROJECT_DIR$/dg.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/base/base.iml" afterPath="$PROJECT_DIR$/services/base/base.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/pom.xml" afterPath="$PROJECT_DIR$/services/pom.xml" />
     </list>
     <ignored path="dg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,6 +28,8 @@
     <ignored path="$PROJECT_DIR$/services/httpserver/target/" />
     <ignored path="$PROJECT_DIR$/services/base/target/" />
     <ignored path="$PROJECT_DIR$/services/helloworld/target/" />
+    <ignored path="$PROJECT_DIR$/services/k8sclient/target/" />
+    <ignored path="$PROJECT_DIR$/services/k8scontroller/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,45 +46,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SpeedMain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/SpeedMain.java">
+      <file leaf-file-name="K8scontrollerMain.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/services/k8scontroller/src/main/java/K8scontrollerMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+            <state relative-caret-position="315">
+              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
               <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#2926#2927#0" expanded="true" />
-                <element signature="e#2968#2969#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="SpeedMain.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/SpeedMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="5" column="120" selection-start-line="5" selection-start-column="120" selection-end-line="5" selection-end-column="120" />
+            <state relative-caret-position="341">
+              <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/k8scontroller/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-454">
+              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="start.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/speed/src/non-packaged-resources/start.sh">
+      <file leaf-file-name="assembly.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/speed/src/main/docker/assembly.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/services/speed/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="201" column="42" selection-start-line="201" selection-start-column="42" selection-end-line="201" selection-end-column="42" />
+            <state relative-caret-position="315">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -111,7 +119,6 @@
         <option value="$PROJECT_DIR$/services/http-server/src/main/java/UserRoutes.java" />
         <option value="$PROJECT_DIR$/services/http-server/src/main/java/com/kj/dg/services/http/server/UserRoutes.java" />
         <option value="$PROJECT_DIR$/services/http-server/src/main/java/com/kj/dg/services/http/server/UserRegistryMessages.java" />
-        <option value="$PROJECT_DIR$/services/pom.xml" />
         <option value="$PROJECT_DIR$/services/http-server/pom.xml" />
         <option value="$PROJECT_DIR$/services/httpserver/src/main/java/com/kj/dg/services/httpserver/UserRegistryMessages.java" />
         <option value="$PROJECT_DIR$/services/httpserver/src/main/java/com/kj/dg/services/httpserver/UserRoutes.java" />
@@ -142,6 +149,11 @@
         <option value="$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/SpeedMain.java" />
         <option value="$PROJECT_DIR$/services/speed/src/non-packaged-resources/start.sh" />
         <option value="$PROJECT_DIR$/services/speed/pom.xml" />
+        <option value="$PROJECT_DIR$/services/k8sclient/pom.xml" />
+        <option value="$PROJECT_DIR$/services/pom.xml" />
+        <option value="$PROJECT_DIR$/services/k8scontroller/src/main/java/K8scontrollerMain.java" />
+        <option value="$PROJECT_DIR$/services/k8scontroller/pom.xml" />
+        <option value="$PROJECT_DIR$/services/k8scontroller/Dockerfile" />
       </list>
     </option>
   </component>
@@ -393,6 +405,102 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="k8scontroller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="k8scontroller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="k8scontroller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="k8scontroller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="httpserver" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -562,86 +670,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helloworld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helloworld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engining" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engining" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1264,7 +1292,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27265626" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29453126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1299,30 +1327,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/services/httpserver/httpserver.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/java/com/kj/com.kj.dg.services.httpserver/UserRegistryMessages.java" />
-    <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/java/com/kj/com.kj.dg.services.httpserver/UserRoutes.java" />
-    <entry file="file://$PROJECT_DIR$/services/services.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/java/com/kj/com.kj.dg.services.httpserver/HTTPServer.java" />
     <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/java/com/kj/com.kj.dg.services.httpserver/UserRegistryActor.java" />
     <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/java/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1346,14 +1357,6 @@
     <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/reference.conf" />
     <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/httpserver-dev.conf" />
     <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/httpserver.conf" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/base/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1491,16 +1494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/java/com/kj/dg/services/httpserver/HTTPServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/UserRegistryActor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="741">
@@ -1522,14 +1515,6 @@
             <element signature="e#1485#1486#0" expanded="false" />
             <element signature="e#1545#1546#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/java/com/kj/dg/services/httpserver/UserRegistryActor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="81" column="43" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1558,22 +1543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/resources/application.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="101" column="16" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/speed/run.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1598,39 +1567,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/speed/src/main/docker/assembly.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="5" column="120" selection-start-line="5" selection-start-column="120" selection-end-line="5" selection-end-column="120" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/net/NetworkInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1379">
           <caret line="109" column="36" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/SpeedMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2926#2927#0" expanded="true" />
-            <element signature="e#2968#2969#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1644,17 +1585,118 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/services/speed/src/non-packaged-resources/start.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        <state relative-caret-position="120">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/java/com/kj/dg/services/httpserver/UserRegistryActor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/resources/application.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="101" column="16" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/k8sclient/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/services/speed/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="201" column="42" selection-start-line="201" selection-start-column="42" selection-end-line="201" selection-end-column="42" />
+        <state relative-caret-position="180">
+          <caret line="66" column="2" selection-start-line="66" selection-start-column="2" selection-end-line="66" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/k8scontroller/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-454">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/k8scontroller/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/speed/src/main/docker/assembly.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/java/com/kj/dg/services/httpserver/HTTPServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/SpeedMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/k8scontroller/src/main/java/K8scontrollerMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1711,7 +1753,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>speed</last-edited>
+          <last-edited>dg-services-k8scontroller</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

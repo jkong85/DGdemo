@@ -24,19 +24,24 @@
         <processorPath useClasspath="true" />
         <module name="base" />
         <module name="dg-services-httpserver" />
-        <module name="engining" />
-        <module name="helloworld" />
+        <module name="dg-services-k8scontroller" />
         <module name="http-server" />
+        <module name="k8sclient" />
+        <module name="k8scontroller" />
         <module name="speed" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="base" target="1.5" />
       <module name="dg" target="1.5" />
+      <module name="dg-services-engining" target="1.5" />
       <module name="dg-services-httpserver" target="1.8" />
+      <module name="dg-services-k8scontroller" target="1.8" />
       <module name="engining" target="1.5" />
       <module name="helloworld" target="1.5" />
       <module name="http-server" target="1.5" />
+      <module name="k8sclient" target="1.8" />
+      <module name="k8scontroller" target="1.7" />
       <module name="services" target="1.5" />
       <module name="speed" target="1.8" />
     </bytecodeTargetLevel>
