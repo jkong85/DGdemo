@@ -38,7 +38,7 @@ public class SpeedMain extends AllDirectives {
     public static void main(String[] args) throws Exception {
         //#server-bootstrapping
         // boot up server using the route as defined below
-        ActorSystem system = ActorSystem.create("helloAkkaHttpServer", ConfigFactory.load());
+        ActorSystem system = ActorSystem.create("SpeedMainActor", ConfigFactory.load());
 
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
