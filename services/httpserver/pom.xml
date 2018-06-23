@@ -219,7 +219,6 @@
                                         <arg>java</arg>
                                         <arg>-jar</arg> 
                                         <arg>/opt/dg/starter.jar</arg>
-                                        <arg>172.20.8.10</arg>
                                     </exec>
                                 </entryPoint>
                                 <assembly>

@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c01e5dbb-a47a-422a-9437-557738e94bc1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dg.iml" afterPath="$PROJECT_DIR$/dg.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/base/base.iml" afterPath="$PROJECT_DIR$/services/base/base.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/engining/engining.iml" afterPath="$PROJECT_DIR$/services/engining/engining.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/helloworld/helloworld.iml" afterPath="$PROJECT_DIR$/services/helloworld/helloworld.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/httpserver/src/main/java/com/kj/dg/services/httpserver/UserRegistryActor.java" afterPath="$PROJECT_DIR$/services/httpserver/src/main/java/com/kj/dg/services/httpserver/UserRegistryActor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/httpserver/pom.xml" afterPath="$PROJECT_DIR$/services/httpserver/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/speed/pom.xml" afterPath="$PROJECT_DIR$/services/speed/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/speed/speed.iml" afterPath="$PROJECT_DIR$/services/speed/speed.iml" />
     </list>
     <ignored path="dg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,8 +54,18 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/httpserver/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="242" column="1" selection-start-line="242" selection-start-column="1" selection-end-line="242" selection-end-column="1" />
+            <state relative-caret-position="546">
+              <caret line="221" column="0" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker/docker-compose.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -73,8 +74,18 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/speed/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="63" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+            <state relative-caret-position="420">
+              <caret line="197" column="32" selection-start-line="197" selection-start-column="32" selection-end-line="197" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/speed/src/non-packaged-resources/start.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -100,7 +111,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -120,40 +131,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRegistryActor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/UserRegistryActor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
-              <caret line="78" column="70" selection-start-line="78" selection-start-column="70" selection-end-line="78" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#914#915#0" expanded="false" />
-                <element signature="e#949#950#0" expanded="false" />
-                <element signature="e#980#981#0" expanded="false" />
-                <element signature="e#1014#1015#0" expanded="false" />
-                <element signature="e#1063#1064#0" expanded="false" />
-                <element signature="e#1112#1113#0" expanded="false" />
-                <element signature="e#1216#1217#0" expanded="false" />
-                <element signature="e#1270#1271#0" expanded="false" />
-                <element signature="e#1312#1313#0" expanded="false" />
-                <element signature="e#1354#1355#0" expanded="false" />
-                <element signature="e#1394#1395#0" expanded="false" />
-                <element signature="e#1430#1431#0" expanded="false" />
-                <element signature="e#1485#1486#0" expanded="false" />
-                <element signature="e#1545#1546#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SpeedMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/SpeedMain.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="501">
               <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
               <folding>
-                <element signature="e#2705#2706#0" expanded="false" />
-                <element signature="e#2747#2748#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -198,7 +182,6 @@
         <option value="$PROJECT_DIR$/services/httpserver/src/main/resources/httpserver-dev.conf" />
         <option value="$PROJECT_DIR$/services/httpserver/src/main/resources/application.conf" />
         <option value="$PROJECT_DIR$/services/httpserver/src/main/docker/assembly.xml" />
-        <option value="$PROJECT_DIR$/services/httpserver/pom.xml" />
         <option value="$PROJECT_DIR$/services/httpserver/src/non-packaged-resources/start.sh" />
         <option value="$PROJECT_DIR$/services/httpserver/src/main/java/com/kj/dg/services/httpserver/HTTPServer.java" />
         <option value="$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/speed.java" />
@@ -213,9 +196,10 @@
         <option value="$PROJECT_DIR$/services/httpserver/src/main/java/com/kj/dg/services/httpserver/UserRegistryActor.java" />
         <option value="$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/UserRegistryActor.java" />
         <option value="$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/UserRoutes.java" />
-        <option value="$PROJECT_DIR$/services/speed/pom.xml" />
         <option value="$PROJECT_DIR$/services/speed/run.sh" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/services/speed/pom.xml" />
+        <option value="$PROJECT_DIR$/services/httpserver/pom.xml" />
       </list>
     </option>
   </component>
@@ -782,6 +766,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1359,7 +1357,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/services/http-server/src/main/java/com/kj/dg/services/http/server/UserRegistryMessages.java" />
     <entry file="file://$PROJECT_DIR$/services/http-server/src/main/java/com/kj/dg/services/http/server/UserRegistryActor.java" />
     <entry file="file://$PROJECT_DIR$/services/http-server/pom.xml" />
     <entry file="file://$PROJECT_DIR$/services/httpserver/httpserver.iml">
@@ -1506,14 +1503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/speed/src/non-packaged-resources/start.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/SpeedDataMessages.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1604,17 +1593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/SpeedMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
-          <folding>
-            <element signature="e#2705#2706#0" expanded="false" />
-            <element signature="e#2747#2748#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/UserRegistryMessages.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1656,22 +1634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/httpserver/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="242" column="1" selection-start-line="242" selection-start-column="1" selection-end-line="242" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/speed/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="63" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/speed/src/main/docker/assembly.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1692,6 +1654,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/speed/src/main/java/com/kj/dg/services/speed/SpeedMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/speed/src/non-packaged-resources/start.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/speed/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="197" column="32" selection-start-line="197" selection-start-column="32" selection-end-line="197" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/httpserver/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="221" column="0" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
           <folding />
         </state>
       </provider>
