@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dg-services-httpserver</artifactId>
-
+    <artifactId>dg-services-speed</artifactId>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <docker.daemon.hostname/> <!-- inject into maven build via -Ddocker.daemon.hostname=the.hostname -->
@@ -66,7 +65,6 @@
             <version>1.2.1</version>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -136,7 +134,7 @@
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <manifestEntries>
-                                        <Main-Class>com.kj.dg.services.httpserver.HTTPServer</Main-Class>
+                                        <Main-Class>com.kj.dg.services.speed.SpeedMain</Main-Class>
                                     </manifestEntries>
                                 </transformer>
                             </transformers>
@@ -144,29 +142,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <!--<plugin>-->
-                <!--<artifactId>maven-assembly-plugin</artifactId>-->
-                <!--<configuration>-->
-                    <!--<archive>-->
-                        <!--<manifest>-->
-                            <!--<mainClass>com.kj.dg.services.httpserver.HTTPServer</mainClass>-->
-                        <!--</manifest>-->
-                    <!--</archive>-->
-                    <!--<descriptorRefs>-->
-                        <!--<descriptorRef>jar-with-dependencies</descriptorRef>-->
-                    <!--</descriptorRefs>-->
-                <!--</configuration>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<id>make-assembly</id> &lt;!&ndash; this is used for inheritance merges &ndash;&gt;-->
-                        <!--<phase>package</phase> &lt;!&ndash; bind to the packaging phase &ndash;&gt;-->
-                        <!--<goals>-->
-                            <!--<goal>single</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-            <!--</plugin>-->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -186,7 +161,7 @@
                     <arguments>
                         <argument>-classpath</argument>
                         <classpath />
-                        <argument>com.kj.dg.services.httpserver.HTTPServer</argument>
+                        <argument>com.kj.dg.services.speed.SpeedMain</argument>
                     </arguments>
                 </configuration>
             </plugin>
@@ -197,9 +172,9 @@
                     <autoPull>always</autoPull> <!-- always pull latest BaseImage -->
                     <images>
                         <image>
-                            <alias>dg-httpserver</alias>
+                            <alias>dg-speed</alias>
                             <name>
-                                dg-httpserver
+                                dg-speed
                             </name>
                             <build>
                                 <from>${docker.image.jdk}</from>
@@ -214,23 +189,21 @@
                                     <HOSTING_ENVIRONMENT>Docker</HOSTING_ENVIRONMENT>
                                 </env>
                                 <workdir>/opt/dg</workdir>
-<<<<<<< HEAD
                                 <entryPoint>
                                     <exec>
                                         <arg>java</arg>
-                                        <arg>-jar</arg> 
+                                        <arg>-jar</arg>
                                         <arg>/opt/dg/starter.jar</arg>
+                                        <arg>172.20.8.10</arg>
                                     </exec>
                                 </entryPoint>
-=======
->>>>>>> refs/remotes/origin/dev
                                 <assembly>
                                     <basedir>/</basedir>
                                     <descriptor>assembly.xml</descriptor>
                                 </assembly>
                                 <runCmds>
                                     <!-- <runCmd>ln -s /opt/dg/${project.build.finalName}-allinone.jar /opt/dg/starter.jar</runCmd> -->
-                                    <runCmd>ln -s /opt/dg/dg-services-httpserver-1.0-SNAPSHOT-allinone.jar /opt/dg/starter.jar</runCmd>
+                                    <runCmd>ln -s /opt/dg/dg-services-speed-1.0-SNAPSHOT-allinone.jar /opt/dg/starter.jar</runCmd>
                                     <runCmd>chmod u+x start.sh</runCmd>
                                     <runCmd>./start.sh</runCmd>
                                 </runCmds>
@@ -241,7 +214,6 @@
             </plugin>
         </plugins>
     </build>
-
     <profiles>
         <profile>
             <id>docker-build-image</id>
@@ -287,5 +259,8 @@
             </build>
         </profile>
     </profiles>
+
+
+
 
 </project>

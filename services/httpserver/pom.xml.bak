@@ -214,16 +214,14 @@
                                     <HOSTING_ENVIRONMENT>Docker</HOSTING_ENVIRONMENT>
                                 </env>
                                 <workdir>/opt/dg</workdir>
-<<<<<<< HEAD
                                 <entryPoint>
                                     <exec>
                                         <arg>java</arg>
                                         <arg>-jar</arg> 
                                         <arg>/opt/dg/starter.jar</arg>
+                                        <arg>172.20.8.10</arg>
                                     </exec>
                                 </entryPoint>
-=======
->>>>>>> refs/remotes/origin/dev
                                 <assembly>
                                     <basedir>/</basedir>
                                     <descriptor>assembly.xml</descriptor>

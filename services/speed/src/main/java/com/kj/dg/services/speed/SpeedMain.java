@@ -19,6 +19,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.concurrent.CompletionStage;
+import java.util.*;
+import java.util.ArrayList;
 
 /**
  * Created by jkong on 6/22/18.
@@ -74,6 +76,7 @@ public class SpeedMain extends AllDirectives {
 
     private String getHostIPaddress(String file){
         String line;
+        List<String> lines = new ArrayList<>();
         try {
             // FileReader reads text files in the default encoding.
             FileReader fileReader = new FileReader(file);
@@ -83,11 +86,14 @@ public class SpeedMain extends AllDirectives {
             System.out.println("step 1");
 
             while((line = bufferedReader.readLine()) != null) {
+                lines.add(line.toString());
                 System.out.println(line);
-                return line;
+            }
+            bufferedReader.close();
+            if(lines.size()>0){
+                return lines.get(lines.size()-1); 
             }
             // Always close files.
-            bufferedReader.close();
         } catch(FileNotFoundException ex) {
             System.out.println( "Unable to open file '" + file+ "'");
             return "127.0.0.1";

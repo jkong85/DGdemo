@@ -16,6 +16,8 @@ import com.typesafe.config.ConfigFactory;
 
 import java.io.*;
 import java.util.concurrent.CompletionStage;
+import java.util.ArrayList;
+import java.util.*;
 
 /**
  * Created by jkong on 6/21/18.
@@ -70,6 +72,7 @@ public class HTTPServer extends AllDirectives {
     }
 
     private String getHostIPaddress(String file){
+        List<String> lines = new ArrayList<>();
         String line;
         try {
             // FileReader reads text files in the default encoding.
@@ -77,14 +80,16 @@ public class HTTPServer extends AllDirectives {
 
             // Always wrap FileReader in BufferedReader.
             BufferedReader bufferedReader = new BufferedReader(fileReader);
-            System.out.println("step 1");
 
             while((line = bufferedReader.readLine()) != null) {
+                lines.add(line.toString());
                 System.out.println(line);
-                return line;
             }
-            // Always close files.
             bufferedReader.close();
+            if(lines.size()>0){
+                return lines.get(lines.size()-1); 
+            } 
+            // Always close files.
         } catch(FileNotFoundException ex) {
             System.out.println( "Unable to open file '" + file+ "'");
             return "127.0.0.1";
