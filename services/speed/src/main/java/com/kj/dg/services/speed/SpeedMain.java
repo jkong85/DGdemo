@@ -18,9 +18,13 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
 import java.util.concurrent.CompletionStage;
 import java.util.*;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 /**
  * Created by jkong on 6/22/18.
@@ -51,6 +55,7 @@ public class SpeedMain extends AllDirectives {
         SpeedMain app = new SpeedMain(system, userRegistryActor);
 
         String hostIPAddress = app.getHostIPaddress("/opt/dg/ipaddress");
+        //String hostIPAddress = app.getHostIP();
 
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = app.createRoute().flow(system, materializer);
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(routeFlow,
@@ -74,6 +79,41 @@ public class SpeedMain extends AllDirectives {
         return userRoutes.routes();
     }
 
+
+    private String getHostIP()
+    {
+        NetworkInterface iface = null;
+        String ethr;
+        String myip = "";
+        String regex = "^([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." +	"([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." + "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." + "([01]?\\d\\d?|2[0-4]\\d|25[0-5])$";
+        try
+        {
+            for(Enumeration ifaces = NetworkInterface.getNetworkInterfaces();ifaces.hasMoreElements();)
+            {
+                iface = (NetworkInterface)ifaces.nextElement();
+                ethr = iface.getDisplayName();
+                System.out.println("Interface:" + ethr.toString());
+
+                //if (Pattern.matches("eth[0-9]", ethr))
+                if (Pattern.matches("eth0", ethr))
+                {
+                    InetAddress ia = null;
+                    for(Enumeration ips = iface.getInetAddresses();ips.hasMoreElements();)
+                    {
+                        ia = (InetAddress)ips.nextElement();
+                        if (Pattern.matches(regex, ia.getCanonicalHostName()))
+                        {
+                            myip = ia.getCanonicalHostName();
+                            return myip;
+                        }
+                    }
+                }
+            }
+        } catch (SocketException e){}
+        System.out.println("IP:" + myip.toString());
+        return myip;
+    }
+
     private String getHostIPaddress(String file){
         String line;
         List<String> lines = new ArrayList<>();
@@ -83,7 +123,6 @@ public class SpeedMain extends AllDirectives {
 
             // Always wrap FileReader in BufferedReader.
             BufferedReader bufferedReader = new BufferedReader(fileReader);
-            System.out.println("step 1");
 
             while((line = bufferedReader.readLine()) != null) {
                 lines.add(line.toString());
