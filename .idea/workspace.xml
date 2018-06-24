@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c01e5dbb-a47a-422a-9437-557738e94bc1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/client/client.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/client/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/server/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/server/run.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/server/server.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/server/src/main/docker/assembly.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/server/src/main/java/com/kj/dg/services/server/Server.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/httpserver/run.sh" afterPath="$PROJECT_DIR$/services/httpserver/run.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/pom.xml" afterPath="$PROJECT_DIR$/services/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/speed/pom.xml" afterPath="$PROJECT_DIR$/services/speed/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/server/src/main/java/com/kj/dg/services/server/Server.java" afterPath="$PROJECT_DIR$/services/server/src/main/java/com/kj/dg/services/server/Server.java" />
     </list>
     <ignored path="dg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="K8scontrollerMain.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="K8scontrollerMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/k8scontroller/src/main/java/K8scontrollerMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+            <state relative-caret-position="330">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -111,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/services/server/src/main/java/com/kj/dg/services/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="435">
+              <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -187,10 +175,10 @@
         <option value="$PROJECT_DIR$/services/k8scontroller/Dockerfile" />
         <option value="$PROJECT_DIR$/services/server/pom1.xml" />
         <option value="$PROJECT_DIR$/services/server/src/main/java/com/kj/dg/services/server/ServerMain.java" />
-        <option value="$PROJECT_DIR$/services/server/src/main/java/com/kj/dg/services/server/Server.java" />
         <option value="$PROJECT_DIR$/services/speed/pom.xml" />
         <option value="$PROJECT_DIR$/services/server/src/main/docker/assembly.xml" />
         <option value="$PROJECT_DIR$/services/server/pom.xml" />
+        <option value="$PROJECT_DIR$/services/server/src/main/java/com/kj/dg/services/server/Server.java" />
       </list>
     </option>
   </component>
@@ -1513,9 +1501,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/resources/httpserver.conf" />
-    <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/application.conf" />
-    <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/application.conf.bak" />
     <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/reference.conf" />
     <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/httpserver-dev.conf" />
     <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/httpserver.conf" />
@@ -1809,14 +1794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/kubernetes/client-java-api/2.0.0-beta1/client-java-api-2.0.0-beta1.jar!/io/kubernetes/client/apis/CoreV1Api.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="10537" column="21" selection-start-line="10537" selection-start-column="21" selection-end-line="10537" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/httpserver/src/main/java/com/kj/dg/services/httpserver/HTTPServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1889,16 +1866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/server/src/main/java/com/kj/dg/services/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -1915,12 +1882,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/kubernetes/client-java-api/2.0.0-beta1/client-java-api-2.0.0-beta1.jar!/io/kubernetes/client/apis/CoreV1Api.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="10506" column="8" selection-start-line="10506" selection-start-column="8" selection-end-line="10506" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/kubernetes/client-java-api/2.0.0-beta1/client-java-api-2.0.0-beta1.jar!/io/kubernetes/client/ApiClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="91" column="11" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/kubernetes/client-java/2.0.0-beta1/client-java-2.0.0-beta1.jar!/io/kubernetes/client/util/ClientBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="143" column="36" selection-start-line="143" selection-start-column="36" selection-end-line="143" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/kubernetes/client-java/2.0.0-beta1/client-java-2.0.0-beta1.jar!/io/kubernetes/client/util/Config.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="78" column="42" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/services/k8scontroller/src/main/java/K8scontrollerMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+        <state relative-caret-position="330">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/server/src/main/java/com/kj/dg/services/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+          <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
