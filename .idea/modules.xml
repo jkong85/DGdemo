@@ -3,10 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/services/base/base.iml" filepath="$PROJECT_DIR$/services/base/base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services/client/client.iml" filepath="$PROJECT_DIR$/services/client/client.iml" />
       <module fileurl="file://$PROJECT_DIR$/dg.iml" filepath="$PROJECT_DIR$/dg.iml" />
       <module fileurl="file://$PROJECT_DIR$/services/httpserver/dg-services-httpserver.iml" filepath="$PROJECT_DIR$/services/httpserver/dg-services-httpserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/services/k8scontroller/dg-services-k8scontroller.iml" filepath="$PROJECT_DIR$/services/k8scontroller/dg-services-k8scontroller.iml" />
       <module fileurl="file://$PROJECT_DIR$/services/http-server/httpserver.iml" filepath="$PROJECT_DIR$/services/http-server/httpserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services/server/server.iml" filepath="$PROJECT_DIR$/services/server/server.iml" />
       <module fileurl="file://$PROJECT_DIR$/services/services.iml" filepath="$PROJECT_DIR$/services/services.iml" />
       <module fileurl="file://$PROJECT_DIR$/services/speed/speed.iml" filepath="$PROJECT_DIR$/services/speed/speed.iml" />
     </modules>

@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/services/httpserver" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/services/k8scontroller" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/services/speed" charset="UTF-8" />
   </component>
 </project>

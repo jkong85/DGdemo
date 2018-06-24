@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dg-services-speed</artifactId>
+    <artifactId>dg-services-server</artifactId>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <docker.daemon.hostname/> <!-- inject into maven build via -Ddocker.daemon.hostname=the.hostname -->
@@ -19,52 +19,13 @@
         </docker.daemon.url>
 
         <docker.registry>docker.io</docker.registry>
-        <docker.repository>${docker.registry}/jkong85</docker.repository>
+        <docker.repository>${docker.registry}/eclipse</docker.repository>
         <docker.image.additional.tag/>
         <docker.image.jdk>docker.io/adoptopenjdk/openjdk8-openj9:jdk8u162-b12_openj9-0.8.0-alpine</docker.image.jdk>
         <docker.image.port>8080</docker.image.port>
-
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-actor_2.12</artifactId>
-            <version>2.5.13</version>
-        </dependency>
-        <dependency>
-            <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-http_2.12</artifactId>
-            <version>10.0.11</version>
-        </dependency>
-        <dependency>
-            <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-stream_2.12</artifactId>
-            <version>2.5.11</version>
-        </dependency>
-        <dependency>
-            <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-http-jackson_2.12</artifactId>
-            <version>10.0.11</version>
-        </dependency>
-        <dependency>
-            <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-http-testkit_2.12</artifactId>
-            <version>10.0.11</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.typesafe</groupId>
-            <artifactId>config</artifactId>
-            <version>1.2.1</version>
-        </dependency>
-    </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -134,7 +95,7 @@
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <manifestEntries>
-                                        <Main-Class>com.kj.dg.services.speed.SpeedMain</Main-Class>
+                                        <Main-Class>com.kj.dg.services.server.Server</Main-Class>
                                     </manifestEntries>
                                 </transformer>
                             </transformers>
@@ -142,6 +103,9 @@
                     </execution>
                 </executions>
             </plugin>
+
+
+
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -161,7 +125,7 @@
                     <arguments>
                         <argument>-classpath</argument>
                         <classpath />
-                        <argument>com.kj.dg.services.speed.SpeedMain</argument>
+                        <argument>com.kj.dg.services.server.Server</argument>
                     </arguments>
                 </configuration>
             </plugin>
@@ -174,9 +138,9 @@
                     <pushRegistry>docker.io</pushRegistry>
                     <images>
                         <image>
-                            <alias>dg-speed</alias>
+                            <alias>dg-server</alias>
                             <name>
-                                dg-speed
+                                dg-server
                             </name>
                             <build>
                                 <from>${docker.image.jdk}</from>
@@ -191,23 +155,22 @@
                                     <HOSTING_ENVIRONMENT>Docker</HOSTING_ENVIRONMENT>
                                 </env>
                                 <workdir>/opt/dg</workdir>
-                                <!--<entryPoint>-->
-                                    <!--<exec>sleep 3</exec>-->
-                                    <!--<exec>-->
-                                        <!--<arg>java</arg>-->
-                                        <!--<arg>-jar</arg>-->
-                                        <!--<arg>/opt/dg/starter.jar</arg>-->
-                                    <!--</exec>-->
-                                <!--</entryPoint>-->
+                                <entryPoint>
+                                    <exec>
+                                        <arg>java</arg>
+                                        <arg>-jar</arg>
+                                        <arg>/opt/dg/starter.jar</arg>
+                                    </exec>
+                                </entryPoint>
                                 <assembly>
                                     <basedir>/</basedir>
                                     <descriptor>assembly.xml</descriptor>
                                 </assembly>
                                 <runCmds>
                                     <!-- <runCmd>ln -s /opt/dg/${project.build.finalName}-allinone.jar /opt/dg/starter.jar</runCmd> -->
-                                    <runCmd>ln -s /opt/dg/dg-services-speed-1.0-SNAPSHOT-allinone.jar /opt/dg/starter.jar</runCmd>
-                                    <runCmd>chmod u+x start.sh</runCmd>
-                                    <runCmd>./start.sh</runCmd>
+                                    <runCmd>ln -s /opt/dg/dg-services-server-1.0-SNAPSHOT-allinone.jar /opt/dg/starter.jar</runCmd>
+                                    <!--<runCmd>chmod u+x start.sh</runCmd>-->
+                                    <!--<runCmd>./start.sh</runCmd>-->
                                 </runCmds>
                             </build>
                         </image>
@@ -216,8 +179,6 @@
             </plugin>
         </plugins>
     </build>
-
-
 
     <profiles>
         <profile>
@@ -264,8 +225,6 @@
             </build>
         </profile>
     </profiles>
-
-
 
 
 </project>

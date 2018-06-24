@@ -3,21 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>dg</artifactId>
+        <artifactId>dg-services</artifactId>
         <groupId>com.kj.dg</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dg-services</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>speed</module>
-        <module>httpserver</module>
-        <module>base</module>
-        <module>k8scontroller</module>
-        <module>server</module>
-        <module>client</module>
-    </modules>
+    <artifactId>dg-services-client</artifactId>
+
 
 </project>
