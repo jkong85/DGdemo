@@ -35,7 +35,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="base" target="1.5" />
-      <module name="client" target="1.5" />
+      <module name="client" target="1.8" />
       <module name="dg" target="1.5" />
       <module name="dg-services-engining" target="1.5" />
       <module name="dg-services-httpserver" target="1.8" />

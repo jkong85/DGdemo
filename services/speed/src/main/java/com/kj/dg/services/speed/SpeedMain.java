@@ -14,16 +14,14 @@ import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 import com.typesafe.config.ConfigFactory;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.util.concurrent.CompletionStage;
 import java.util.*;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
@@ -54,8 +52,9 @@ public class SpeedMain extends AllDirectives {
         //In order to access all directives we need an instance where the routes are define.
         SpeedMain app = new SpeedMain(system, userRegistryActor);
 
-        String hostIPAddress = app.getHostIPaddress("/opt/dg/ipaddress");
+        //String hostIPAddress = app.getHostIPaddress("/opt/dg/ipaddress");
         //String hostIPAddress = app.getHostIP();
+        String hostIPAddress = app.getHostIPbyShell();
 
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = app.createRoute().flow(system, materializer);
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(routeFlow,
@@ -64,10 +63,19 @@ public class SpeedMain extends AllDirectives {
         System.out.println("Server online at http://" + hostIPAddress + ":8080/\nPress RETURN to stop...");
         System.in.read(); // let it run until user presses return
 
+        int flag = 2;
+        while( flag-- > 0 ){
+            Thread.sleep(5000);
+            //#http-server
+            System.out.println("Speed is still running ...");
+            flag = 2;
+        }
+
         binding
                 .thenCompose(ServerBinding::unbind) // trigger unbinding from the port
                 .thenAccept(unbound -> system.terminate()); // and shutdown when done
         //#http-server
+        System.out.println("SpeedMain exited successfully");
     }
 
     //#main-class
@@ -79,6 +87,43 @@ public class SpeedMain extends AllDirectives {
         return userRoutes.routes();
     }
 
+    private String getHostIPbyShell(){
+        try {
+            Thread.currentThread().sleep(1000);//毫秒
+        } catch(Exception e){}
+
+        String s = null;
+        //String cmd = " ifconfig eth0 | awk '/inet addr/{print substr($2,6)}' >> /opt/dg/ipaddress";
+        String cmd = " ifconfig eth0 ";
+        try {
+            // run the Unix "ps -ef" command
+            Process p = Runtime.getRuntime().exec(cmd);
+
+            BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            // read the output from the command
+            System.out.println("Here is the standard output of the command:\n");
+
+            s = stdInput.readLine();
+            s = stdInput.readLine();
+
+            String regEx="((2[0-4]\\d|25[0-5]|[01]?\\d\\d?)\\.){3}(2[0-4]\\d|25[0-5]|[01]?\\d\\d?)";
+            Pattern pt = Pattern.compile(regEx);
+            Matcher m = pt.matcher(s);
+
+            while (m.find()) {
+                String result=m.group();
+                System.out.println(result);
+                return result;
+            }
+        }
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            return  "127.0.0.1";
+        }
+
+        return "127.0.0.1";
+    }
 
     private String getHostIP()
     {

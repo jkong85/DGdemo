@@ -191,14 +191,13 @@
                                     <HOSTING_ENVIRONMENT>Docker</HOSTING_ENVIRONMENT>
                                 </env>
                                 <workdir>/opt/dg</workdir>
-                                <!--<entryPoint>-->
-                                    <!--<exec>sleep 3</exec>-->
-                                    <!--<exec>-->
-                                        <!--<arg>java</arg>-->
-                                        <!--<arg>-jar</arg>-->
-                                        <!--<arg>/opt/dg/starter.jar</arg>-->
-                                    <!--</exec>-->
-                                <!--</entryPoint>-->
+                                <entryPoint>
+                                    <exec>
+                                        <arg>java</arg>
+                                        <arg>-jar</arg>
+                                        <arg>/opt/dg/starter.jar</arg>
+                                    </exec>
+                                </entryPoint>
                                 <assembly>
                                     <basedir>/</basedir>
                                     <descriptor>assembly.xml</descriptor>
@@ -207,7 +206,7 @@
                                     <!-- <runCmd>ln -s /opt/dg/${project.build.finalName}-allinone.jar /opt/dg/starter.jar</runCmd> -->
                                     <runCmd>ln -s /opt/dg/dg-services-speed-1.0-SNAPSHOT-allinone.jar /opt/dg/starter.jar</runCmd>
                                     <runCmd>chmod u+x start.sh</runCmd>
-                                    <runCmd>./start.sh</runCmd>
+                                    <!--<runCmd>./start.sh</runCmd>-->
                                 </runCmds>
                             </build>
                         </image>
