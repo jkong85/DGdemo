@@ -1,0 +1,4 @@
+sudo kubectl create -f bmw-car1-server.yaml
+sudo kubectl create -f bmw-car1-speed.yaml
+sleep 5 
+sudo kubectl create -f bmw-car1-service.yaml

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bmw-car1-server
+spec:
+  selector:
+    matchLabels:
+      app: bmw-car1 
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bmw-car1 
+    spec:
+      containers:
+      - name: bmw-car1-server
+        image: jkong85/dg-server:0.2
+        ports:
+        - containerPort: 8080
+      nodeSelector:
+        kubernetes.io/hostname: node1
