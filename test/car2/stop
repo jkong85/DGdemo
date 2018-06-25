@@ -1,0 +1,4 @@
+sudo kubectl delete -f bmw-car2-service.yaml
+sleep 2 
+sudo kubectl delete -f bmw-car2-client.yaml
+sudo kubectl delete -f bmw-car2-speed.yaml
