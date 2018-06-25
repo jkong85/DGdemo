@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bmw-car2-speed
+spec:
+  selector:
+    matchLabels:
+      app: bmw-car2 
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bmw-car2 
+    spec:
+      containers:
+      - name: bmw-car2-speed
+        image: jkong85/dg-speed:0.2
+        ports:
+        - containerPort: 8080
+      nodeSelector:
+        kubernetes.io/hostname: node2
