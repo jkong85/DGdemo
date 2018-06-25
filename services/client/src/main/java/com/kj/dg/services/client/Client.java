@@ -6,18 +6,22 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by jkong on 6/24/18.
  */
 public class Client {
-    public static final String IP_ADDR = "172.33.13.1";//server address
+    public static String IP_ADDR = "172.33.97.1";//server address
     public static final int PORT = 12345;// server port
+    public Client(){
+    }
     public static void main(String[] args) {
         //String IP_ADDR = args[0];
         //int PORT = Integer.parseInt(args[1]);// server port
         //System.out.println("Client is starting to connect to IP: " + IP_ADDR + " Port: " + args[1]);
-        System.out.println("Client stop when recieved OK from server!\n");
+        System.out.println("Client started, and will exit after 1000s (for test only) \n");
         int flag = 100;  // For debug, avoiding unlimited exceptions
 
         while (true && flag-- > 0)
