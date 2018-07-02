@@ -1,0 +1,15 @@
+apiVersion: v1  
+kind: Service  
+metadata:  
+  labels:  
+    app: spring-car1
+  name: spring-car1 
+  namespace: default  
+spec:  
+  type: NodePort  
+  ports:  
+  - port: 8080  
+    targetPort: 8870 
+    nodePort: 30062
+  selector: 
+    app: spring-car1 

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-car1-speed
+spec:
+  selector:
+    matchLabels:
+      app: spring-car1 
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: spring-car1 
+    spec:
+      containers:
+      - name: spring-car1-speed
+        image: jkong85/dg-spring-speed:latest
+        ports:
+        - containerPort: 8871
+      nodeSelector:
+        kubernetes.io/hostname: node1
